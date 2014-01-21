@@ -9,5 +9,11 @@
         <file>images/8.png</file>
         <file>images/9.png</file>
         <file>images/1.png</file>
+        <file>qml/ScreenGrid/main.qml</file>
+        <file>qml/ScreenGrid/ScreenItem.qml</file>
+        <file>qml/ScreenGrid/ScreensGrid.qml</file>
+        <file>qml/ScreenGrid/ScreensRow.qml</file>
+        <file>qml/ScreenGrid/TextItem.qml</file>
+        <file>qml/ScreenGrid/ToolBar.qml</file>
     </qresource>
 </RCC>

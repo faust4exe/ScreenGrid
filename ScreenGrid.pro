@@ -1,8 +1,3 @@
-# Add more folders to ship with the application, here
-folder_01.source = qml/ScreenGrid
-folder_01.target = qml
-DEPLOYMENTFOLDERS = folder_01
-
 # Additional import path used to resolve QML modules in Creator's code model
 QML_IMPORT_PATH =
 
@@ -38,3 +33,12 @@ qtcAddDeployment()
 
 RESOURCES += \
     rsrs.qrc
+
+OTHER_FILES += \
+    qtc_packaging/debian_harmattan/rules \
+    qtc_packaging/debian_harmattan/README \
+    qtc_packaging/debian_harmattan/manifest.aegis \
+    qtc_packaging/debian_harmattan/copyright \
+    qtc_packaging/debian_harmattan/control \
+    qtc_packaging/debian_harmattan/compat \
+    qtc_packaging/debian_harmattan/changelog

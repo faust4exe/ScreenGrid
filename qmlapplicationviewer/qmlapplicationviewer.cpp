@@ -137,20 +137,23 @@ void QmlApplicationViewer::setOrientation(ScreenOrientation orientation)
     case ScreenOrientationAuto:
         attribute = static_cast<Qt::WidgetAttribute>(130);
         break;
+#elif QT_VERSION > 0x050000
+	default:
+		return;
 #else // QT_VERSION < 0x040702
-    case ScreenOrientationLockPortrait:
-        attribute = Qt::WA_LockPortraitOrientation;
-        break;
-    case ScreenOrientationLockLandscape:
-        attribute = Qt::WA_LockLandscapeOrientation;
-        break;
-    default:
-    case ScreenOrientationAuto:
-        attribute = Qt::WA_AutoOrientation;
-        break;
+	case ScreenOrientationLockPortrait:
+		attribute = Qt::WA_LockPortraitOrientation;
+		break;
+	case ScreenOrientationLockLandscape:
+		attribute = Qt::WA_LockLandscapeOrientation;
+		break;
+	default:
+	case ScreenOrientationAuto:
+		attribute = Qt::WA_AutoOrientation;
+		break;
 #endif // QT_VERSION < 0x040702
     };
-    setAttribute(attribute, true);
+	setAttribute(attribute, true);
 }
 
 void QmlApplicationViewer::showExpanded()
